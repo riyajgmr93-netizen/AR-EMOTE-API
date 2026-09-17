@@ -38,7 +38,7 @@ Hr = {
     'Expect': "100-continue",
     'X-Unity-Version': "2018.4.11f1",
     'X-GA': "v1 1",
-    'ReleaseVersion': "OB54"}
+    'ReleaseVersion': "OB55"}
 # --- emotes.json se IDs load karna ---
 try:
     with open("emotes.json", "r", encoding="utf-8") as f:
@@ -511,10 +511,7 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, LoGinDaTaUncRypTinG, ready_event
                             uid = response.Data.uid
                             chat_id = response.Data.Chat_ID
                             message = '/d <uid1> <uid2>... <emoteid> /f <uid1> <uid2>... <emoteid> for fast emote'                                if not s:
-                                    if VALID_EMOTE_IDS and idT not in VALID_EMOTE_IDS:
-                                        err_msg = f"[B][C]{get_random_color()}\nInvalid Emote ID: {idT}!\n"
-                                        P_err = await SEndMsG(response.Data.chat_type, err_msg, uid, chat_id, key, iv)
-                                        await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P_err)
+                                    
                                     else:
                                         try:
                                             await SEndPacKeT(whisper_writer, online_writer, 'ChaT', P)
